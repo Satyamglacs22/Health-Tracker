@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🔥 Habit Tracker</h1>
+        <button id="darkModeToggle">🌙</button>
+    </header>
+
+    <main>
+        <section class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <button id="addTaskBtn">➕ Add</button>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+        </section>
+
+        <section class="progress-section">
+            <p>Progress</p>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+            <p id="progressText">0% completed</p>
+            <p id="streakText">🔥 Streak: 0 days</p>
+        </section>
+
+        <section>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section class="chart-section">
+            <h3>Task Analytics</h3>
+            <canvas id="taskChart"></canvas>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
